@@ -61,3 +61,4 @@ logging.basicConfig(filename=LOG_FILE, format=LOG_FORMAT, level=LOG_LEVEL)
 # this is where the robot is instantiated. Our whole app is basicly this one line
 if __name__ == "__main__":
     r = Robot()
+    r.reset_all()
