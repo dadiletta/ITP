@@ -23,17 +23,19 @@ class Robot(MrA):
         """Displays menu dictionary, takes key-input and calls method"""
         ## This is a DICTIONARY, it's a list with custom index values
         # You may change the menu if you'd like to add an experimental method
+
         menu = {
                 "s": ("Check status", self.status),
                 "q": ("Quit", quit_now)
                 }
-        # loop and print the menu...
-        for key in sorted(menu.keys()):
-            print(key + ":" + menu[key][0])
-        # store the user's answer
-        ans = input("Your selection: ")
-        # activate the item selected
-        menu.get(ans, [None, error])[1]()
+        while True:
+            # loop and print the menu...
+            for key in sorted(menu.keys()):
+                print(key + ":" + menu[key][0])
+            # store the user's answer
+            ans = input("Your selection: ")
+            # activate the item selected
+            menu.get(ans, [None, error])[1]()
 
     def status(self):
         self.dist()
