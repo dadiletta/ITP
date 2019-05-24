@@ -56,7 +56,7 @@ def quit_now():
 
 # SETUP LOGGING TO HELP TRACK ERRORS
 LOG_LEVEL = logging.INFO
-LOG_FILE = "/home/pi/PnR-Final/log_robot.log"  # don't forget to make this file!
+LOG_FILE = "/home/pi/itp/log_robot.log"  # don't forget to make this file!
 LOG_FORMAT = "%(asctime)s %(levelname)s %(message)s"
 logging.basicConfig(filename=LOG_FILE, format=LOG_FORMAT, level=LOG_LEVEL)
 
