@@ -15,6 +15,7 @@ class Robot(MrA):
         Constructor; our place to setup instance variables
         """
         super().__init__()  
+        self.reset_all()
 
         # run the menu loop
         self.menu()
@@ -60,7 +61,11 @@ LOG_FILE = "/home/pi/itp/log_robot.log"  # don't forget to make this file!
 LOG_FORMAT = "%(asctime)s %(levelname)s %(message)s"
 logging.basicConfig(filename=LOG_FILE, format=LOG_FORMAT, level=LOG_LEVEL)
 
-# this is where the robot is instantiated. Our whole app is basicly this one line
+# this is where the robot is instantiated
 if __name__ == "__main__":
-    r = Robot()
-    r.reset_all()
+    try:
+        r = Robot()
+    except (KeyboardInterrupt, SystemExit):
+        r.reset_all()
+    except Exception as ee:
+        logging.error(ee.__str__())
