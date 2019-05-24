@@ -6,7 +6,7 @@ from di_sensors.inertial_measurement_unit import InertialMeasurementUnit
 class MrA(gopigo3.GoPiGo3):
 
     def __init__(self):
-        super().__init__()
+        self.super().__init__()
         self.imu = InertialMeasurementUnit(bus = "GPG3_AD1") 
         self.ds = EasyDistanceSensor()
 
@@ -20,7 +20,7 @@ class MrA(gopigo3.GoPiGo3):
         print("currently facing angle: {} deg".format(num))
         return num
 
-        
+
 
 
 
