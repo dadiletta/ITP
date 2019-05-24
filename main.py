@@ -14,7 +14,7 @@ class Robot(MrA):
         """
         Constructor; our place to setup instance variables
         """
-        super(self).__init__()  
+        super().__init__()  
 
         # run the menu loop
         self.menu()
