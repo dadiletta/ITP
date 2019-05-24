@@ -1,3 +1,5 @@
+# BUILD USING PYTHON 3
+
 import time
 import gopigo3
 from di_sensors.easy_distance_sensor import EasyDistanceSensor
@@ -6,7 +8,7 @@ from di_sensors.inertial_measurement_unit import InertialMeasurementUnit
 class MrA(gopigo3.GoPiGo3):
 
     def __init__(self):
-        self.super().__init__()
+        super().__init__()
         self.imu = InertialMeasurementUnit(bus = "GPG3_AD1") 
         self.ds = EasyDistanceSensor()
 

@@ -1,3 +1,5 @@
+# BUILD USING PYTHON 3
+
 from ancestor import MrA
 import logging
 
@@ -12,7 +14,7 @@ class Robot(MrA):
         """
         Constructor; our place to setup instance variables
         """
-        self.super().__init__()  
+        super(self).__init__()  
 
         # run the menu loop
         self.menu()
@@ -29,7 +31,7 @@ class Robot(MrA):
         for key in sorted(menu.keys()):
             print(key + ":" + menu[key][0])
         # store the user's answer
-        ans = raw_input("Your selection: ")
+        ans = input("Your selection: ")
         # activate the item selected
         menu.get(ans, [None, error])[1]()
 
